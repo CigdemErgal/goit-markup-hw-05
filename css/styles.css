@@ -452,3 +452,6 @@ header .container {
 .icon {
   fill: currentColor;
 }
+.backdrop{
+  background-color: rgba(46, 47, 66, 0.4);
+}
