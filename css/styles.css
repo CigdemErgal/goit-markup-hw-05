@@ -454,4 +454,6 @@ header .container {
 }
 .backdrop{
   background-color: rgba(46, 47, 66, 0.4);
+  position: fixed;
+  inset: 0;
 }
