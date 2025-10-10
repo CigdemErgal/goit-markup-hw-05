@@ -517,15 +517,18 @@
               placeholder="Text Input"
             ></textarea>
           </label>
-          <fieldset class="form-group">
-            <legend class="group-title">
-              I accept the terms and conditions of the 
-              <a href="#" class="privacy-link">Privacy Policy</a>
-            </legend>
-            <div class="form-field">
-              <input type="checkbox" name="accept" value="accept" id="accept" />
-            </div>
-          </fieldset>
+          <label class="checkbox">
+  <input
+    class="checkbox-input"
+    type="checkbox"
+    name="accept"
+    id="accept"
+  />
+  <div class="checkbox-text">
+    I accept the terms and conditions of the
+    <a class="privacy-link" href="#"> Privacy Policy</a>
+  </div>
+</label>
           <button type="submit" class="send-btn">Send</button>
         </form>
       </div>
