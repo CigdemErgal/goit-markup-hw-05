@@ -480,6 +480,7 @@ header .container {
 }
 .modal-close {
   position: absolute;
+  top:24px ;
   right: 24px;
   width: 24px;
   height: 24px;
@@ -490,19 +491,21 @@ header .container {
   place-items: center;
   padding: 0;
   cursor: pointer;
+  
 }
 .modal-title {
-  display: block;
   width: 360px;
   height: 24px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.02em;
-  font: 500 16px/24px "Roboto", sans-serif;
+  font: 500 16px/24px "Roboto",sans-serif;
   color: #2e2f42;
-  margin: 0 0 8px;
+  margin: 0 0 16px;
 }
+ 
+  
+  
+  
+  
+
 .form {
   line-height: 14px;
   display: flex;
@@ -521,8 +524,14 @@ label {
   margin-bottom: 8px;
 }
 .input {
-  padding: 3px;
+  width: 360px;
+  height: 336px;
+  top:112px;
+  left: 540px;
+  gap:0;
   font-family: "Roboto", sans-serif;
+  border-radius: 4px;
+  gap: 8px;
 }
 .input-field {
   position: relative;
@@ -559,6 +568,29 @@ label {
   pointer-events: none;
   fill: rgba(46, 47, 66, 1);
 }
+/* Ana satır: checkbox + metin yan yana */
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+/* Kutuyu metinle hizalamak için hafif yukarı */
+.checkbox-input {
+  margin-top: 2px;
+  flex: 0 0 auto;
+}
+
+/* Figma değerleri: 12/14, gri metin, en fazla ~338px satır uzunluğu */
+.checkbox-text {
+  max-width: 338px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: #8e8f99; /* Small Text rengi */
+}
+
 .send-btn {
   display: block;
   width: 169px;
@@ -576,6 +608,10 @@ label {
   letter-spacing: 0.02em;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+.send-btn:hover,
+.send-btn:focus{
+  background-color: #404bbf;
 }
 textarea {
   resize: none;
@@ -603,25 +639,71 @@ textarea.form-input {
 }
 /* Eski fieldset/legend kurallarını kaldırabilirsiniz */
 
-/* Ana satır: checkbox + metin yan yana */
-.checkbox {
+.site-footer .container{
   display: flex;
-  align-items: flex-start;
-  gap: 8px;
-  margin-top: 8px;
+  align-items: baseline;
+  gap: 120px;
 }
-
-/* Kutuyu metinle hizalamak için hafif yukarı */
-.checkbox-input {
-  margin-top: 2px;
-  flex: 0 0 auto;
+.footer-subscribe{
+  margin-left: auto;
 }
-
-/* Figma değerleri: 12/14, gri metin, en fazla ~338px satır uzunluğu */
-.checkbox-text {
-  max-width: 338px;
-  font-size: 12px;
-  line-height: 14px;
+.subscribe-title{
+  color: #fff;
+  font: 500 16px/24px "Roboto",sans-serif;
+  letter-spacing: 0.02em;
+  margin: 0 0 16px;
+}
+.subscribe-form{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.subscribe-label{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+.subscribe-input{
+  width: 264px;
+  height: 40px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 1px solid rgba(255,255,255,0.9);
+  background: transparent;
+  color: #fff;
+  padding: 8px 16px;
+  outline: none;
+  font: 400 12px/24px "Roboto",sans-serif;
   letter-spacing: 0.04em;
-  color: #8e8f99; /* Small Text rengi */
+}
+.subscribe-input::placeholder{
+  color: rgba(255,255,255,0.6);
+}
+.subscribe-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  height: 40px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4d5ae5;
+  color: #fff;
+  cursor: pointer;
+  font: 500 16px/24px "Roboto",sans-serif;
+  letter-spacing: 0.04em;
+  transition: background-color 25ms cubic-bezier(0.4,0,0.2,1);
+}
+.subscribe-btn:hover,.subscribe-btn:focus{
+  background-color: #404bbf;
+}
+.subscribe-icon{
+  fill: #fff;
 }
