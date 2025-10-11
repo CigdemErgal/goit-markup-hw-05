@@ -484,6 +484,7 @@ header .container {
   right: 24px;
   width: 24px;
   height: 24px;
+  display: flex;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background: #e7e9fc;
@@ -578,6 +579,7 @@ label {
 
 /* Kutuyu metinle hizalamak için hafif yukarı */
 .checkbox-input {
+  display: flex;
   margin-top: 2px;
   flex: 0 0 auto;
 }
