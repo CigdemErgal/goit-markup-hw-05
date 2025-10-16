@@ -595,7 +595,6 @@ label {
   fill: #9747ff;
 }
 
-/* Ana satır: checkbox + metin yan yana */
 .checkbox {
   display: flex;
   flex-direction: row;
@@ -604,7 +603,6 @@ label {
   margin-top: 16px;
 }
 
-/* Kutuyu metinle hizalamak için hafif yukarı */
 .checkbox-input {
   display: flex;
   margin-top: 2px;
@@ -612,13 +610,12 @@ label {
   accent-color: #9747ff;
 }
 
-/* Figma değerleri: 12/14, gri metin, en fazla ~338px satır uzunluğu */
 .checkbox-text {
   max-width: 338px;
   font-size: 12px;
   line-height: 14px;
   letter-spacing: 0.04em;
-  color: #8e8f99; /* Small Text rengi */
+  color: #8e8f99;
 }
 .checkbox-input :focus {
   border-color: #9747ff;
@@ -678,7 +675,6 @@ textarea.form-input {
   color: #8e8f99;
   margin: 0;
 }
-/* Eski fieldset/legend kurallarını kaldırabilirsiniz */
 
 .site-footer .container {
   display: flex;
