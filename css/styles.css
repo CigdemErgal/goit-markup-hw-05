@@ -499,6 +499,10 @@ header .container {
   fill: #2e2f42;
   pointer-events: none;
 }
+.modal-close:hover {
+  transform: scale(0.96);
+  background-color: #9747ff;
+}
 .modal-title {
   display: block;
   margin: 28px 0 16px;
@@ -516,6 +520,9 @@ header .container {
   display: flex;
   flex-direction: column;
 }
+.form :focus-within {
+  border-color: #9747ff;
+}
 .form-field {
   display: flex;
   align-items: flex-start;
@@ -528,20 +535,7 @@ label {
   flex-direction: column;
   margin-bottom: 8px;
 }
-.input {
-  width: 360px;
-  height: 336px;
-  top: 112px;
-  left: 540px;
-  gap: 0;
-  font-family: "Roboto", sans-serif;
-  border-radius: 4px;
-  gap: 8px;
-}
-.input-field {
-  position: relative;
-  margin-top: 4px;
-}
+
 .form-input {
   width: 360px;
   height: 40px;
@@ -561,6 +555,26 @@ label {
   line-height: 14px;
   color: #8e8f99;
 }
+.form-label :focus-within {
+  outline: 1px solid rgba(151, 71, 255, 1);
+}
+.input {
+  width: 360px;
+  height: 336px;
+  top: 112px;
+  left: 540px;
+  gap: 0;
+  font-family: "Roboto", sans-serif;
+  border-radius: 4px;
+  gap: 8px;
+}
+.input-field {
+  position: relative;
+  margin-top: 4px;
+}
+.input-field :focus-within {
+  border-color: #9747ff;
+}
 .input-icon {
   display: flex;
   justify-content: center;
@@ -571,8 +585,16 @@ label {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  fill: rgba(46, 47, 66, 1);
+  color: rgba(46, 47, 66, 1);
 }
+
+.input-field:focus-within .form-input {
+  fill: #9747ff;
+}
+.input-field:focus-within .input-icon {
+  fill: #9747ff;
+}
+
 /* Ana satır: checkbox + metin yan yana */
 .checkbox {
   display: flex;
@@ -596,6 +618,9 @@ label {
   line-height: 14px;
   letter-spacing: 0.04em;
   color: #8e8f99; /* Small Text rengi */
+}
+.checkbox-input :focus {
+  border-color: #9747ff;
 }
 
 .send-btn {
@@ -630,6 +655,10 @@ textarea.form-input {
   resize: none;
   padding: 12px 16px;
   border-radius: 4px;
+}
+.texterea .form-input:focus-within {
+  outline: 1px solid rgba(151, 71, 255, 1);
+  text-decoration: underline;
 }
 .privacy-link {
   color: #404bbf;
