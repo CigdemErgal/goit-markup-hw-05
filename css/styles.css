@@ -609,6 +609,7 @@ label {
   display: flex;
   margin-top: 2px;
   flex: 0 0 auto;
+  accent-color: #9747ff;
 }
 
 /* Figma değerleri: 12/14, gri metin, en fazla ~338px satır uzunluğu */
@@ -621,6 +622,10 @@ label {
 }
 .checkbox-input :focus {
   border-color: #9747ff;
+}
+.checkbox-input:focus-visible {
+  outline: 2px solid #9747ff;
+  outline-offset: 2px;
 }
 
 .send-btn {
